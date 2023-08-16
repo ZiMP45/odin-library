@@ -1,0 +1,27 @@
+/* * {
+    border: 1px solid black;
+} */
+
+.header {
+    background-color: grey;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+}
+
+.left .title {
+    font-size: 24px;
+}
+
+.header .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
