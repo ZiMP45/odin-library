@@ -1,0 +1,3 @@
+- fix overflow issue for containers
+- make interactive hidden sidebar
+- use JS for adding cards via buttons on sidebar?

@@ -2,6 +2,19 @@
     border: 1px solid black;
 }
 
+:root {
+    --ecru: #D1BC91;
+    --wheat: #E6CFA0;
+    --dutch-white: #EFE0C1;
+    --pearl: #F1E4C9;
+    --eggshell: #F5ECDA;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
 .container {
     display: grid;
     grid-template-areas:
@@ -11,22 +24,23 @@
 }
 
 .header {
-    background-color: grey;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     grid-area: header;
+    background-color: var(--eggshell);
 }
 
 .header .top {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 button {
     width: 50px;
     height: 50px;
+    border: none;
+    background-color: var(--eggshell);
 }
 
 .header .left {
@@ -38,9 +52,7 @@ button {
 
 .header .right {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 12px;
+    flex-direction: row;
 }
 
 .right .title {
@@ -48,18 +60,19 @@ button {
 }
 
 .header .bottom {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: white;
-    padding: 12px;
+    display: grid;
+    grid-template-columns: repeat(26, 1fr);
+    text-align: center;
+    
+    background: var(--eggshell);
+    padding-top: 10px;
+    box-shadow: 0 7px 8px -3px var(--ecru);
 }
 
 .bottom a {
     text-decoration: none;
     color: black;
-    border-right: 1px solid black;
-    padding-right: 7px;
+    width: 30px;
 }
 
 .bottom a:last-child {
@@ -69,19 +82,30 @@ button {
 .main-content {
     display: grid;
     grid-template-areas: main-content;
+    grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
+    width: 100vw;
+    height: 100%;
 }
 
 .cards {
     display: grid;
-    grid-template-rows: repeat(3, minmax(250px, 350px));
-    grid-template-columns: repeat(2, minmax(250px, 350px));
+    grid-template-rows: min-content 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 12px;
     align-items: center;
     justify-items: center;
 }
 
 .card {
-    height: 250px;
-    width: 200px;
+    display: flex;
+    height: 200px;
+    width: 150px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid var(--wheat);
+    border-radius: 10px;
 }
