@@ -10,6 +10,11 @@
     --eggshell: #F5ECDA;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .container {
     display: grid;
     grid-template-areas:
@@ -17,7 +22,6 @@
     "main-content main-content main-content"
     "main-content main-content main-content";
     width: 100%;
-    justify-content: center;
 }
 
 .header {
@@ -74,10 +78,11 @@ button {
 }
 
 .main-content {
-    display: grid;
+    display: flex;
     grid-template-areas: main-content;
-    grid-template-columns: 1fr;
     height: fit-content;
+    justify-content: center;
+    margin: 0;
 }
 
 .cards {
