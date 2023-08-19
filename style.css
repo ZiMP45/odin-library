@@ -2,17 +2,20 @@
     border: 1px solid black;
 } */
 
+
 :root {
     --ecru: #D1BC91;
     --wheat: #E6CFA0;
     --dutch-white: #EFE0C1;
     --pearl: #F1E4C9;
     --eggshell: #F5ECDA;
+
 }
 
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .container {
@@ -37,6 +40,8 @@ body {
     flex-direction: row;
     justify-content: space-between;
     background-color: var(--eggshell);
+    padding: 0 12px 0 12px;
+    font-weight: 700;
 }
 
 button {
@@ -70,6 +75,7 @@ button {
     
     background: var(--eggshell);
     box-shadow: 0 7px 12px -3px var(--ecru);
+    padding-bottom: 12px;
     margin-bottom: 28px;
 }
 
@@ -90,7 +96,7 @@ button {
     display: grid;
     grid-template-rows: min-content 1fr;
     grid-template-columns: repeat(7, 1fr);
-    gap: 12px;
+    gap: 18px;
     height: fit-content;
 }
 
