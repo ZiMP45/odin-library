@@ -10,11 +10,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet"> 
 </head>
 <body>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+
     <div class="container">
         <div class="header">
             <div class="top">
                 <div class="left">
-                    <button class="hamburger" type="button">
+                    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                    <!-- <button class="hamburger" type="button" onclick="openNav()" style="cursor:pointer">
                         <svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
             
                             <title>hamburger</title>
@@ -30,7 +40,7 @@
                                 </g>
                             </g>
                         </svg>
-                    </button>
+                    </button> -->
                 </div>
                 <div class="right">
                     <div class="title">The Library</div>
@@ -97,6 +107,6 @@
         </div>    
     </div>
 
-    <script src="app.js"></script>    
+    <script src="./app.js"></script>    
 </body>
 </html>
