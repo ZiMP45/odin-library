@@ -92,7 +92,7 @@ body {
     display: grid;
     grid-template-rows: min-content 1fr;
     grid-template-columns: repeat(7, 1fr);
-    gap: 18px;
+    gap: 12px;
     height: fit-content;
 }
 
@@ -106,6 +106,7 @@ body {
 
     border: 1px solid var(--light);
     border-radius: 10px;
+    transition: 0.5s;
 }
 
 /* interactive slide-in sidebar styling */
