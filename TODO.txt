@@ -1,3 +1,3 @@
-- fix overflow issue for containers
-- make interactive hidden sidebar
-- use JS for adding cards via buttons on sidebar?
+- use JS for adding cards via buttons
+- card should include add and delete buttons
+- card includes: title, author, isbn, page number, read or not

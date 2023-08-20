@@ -4,51 +4,46 @@
 
 
 :root {
-    --ecru: #D1BC91;
-    --wheat: #E6CFA0;
-    --dutch-white: #EFE0C1;
-    --pearl: #F1E4C9;
-    --eggshell: #F5ECDA;
-
+    --lightest: #FAF6EE;
+    --transition: #F5ECD9;
+    --lighter: #F0E1C4;
+    --light: #EAD7B1;
+    --medium: #C4B28F;
+    --dark: #766952;
+    --darker: #584E3E;
+    --darkest: #373126;
 }
 
 body {
     margin: 0;
     padding: 0;
     font-family: 'Ubuntu', sans-serif;
+    background-color: var(--lightest);
 }
 
-.container {
+#container {
     display: flex;
     flex-direction: column;
     grid-template-areas:
     "header header header"
     "main-content main-content main-content"
     "main-content main-content main-content";
-    width: 100%;
+    transition: 0.5s;
 }
 
 .header {
     display: grid;
     grid-template-rows: 2fr 1fr;
     grid-area: header;
-    width: 100%;
 }
 
 .header .top {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: var(--eggshell);
+    background-color: var(--darker);
     padding: 0 12px 0 12px;
     font-weight: 700;
-}
-
-button {
-    width: 50px;
-    height: 50px;
-    border: none;
-    background-color: var(--eggshell);
 }
 
 .header .left {
@@ -61,6 +56,7 @@ button {
     display: flex;
     flex-direction: row;
     align-items: center;
+    color: var(--lightest);
 }
 
 .right .title {
@@ -73,15 +69,15 @@ button {
     grid-template-columns: repeat(26, 1fr);
     text-align: center;
     
-    background: var(--eggshell);
-    box-shadow: 0 7px 12px -3px var(--ecru);
+    background: var(--darker);
+    box-shadow: 0 7px 12px -3px var(--darker);
     padding-bottom: 12px;
     margin-bottom: 28px;
 }
 
 .bottom a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .main-content {
@@ -108,9 +104,11 @@ button {
     justify-content: center;
     align-items: center;
 
-    border: 1px solid var(--wheat);
+    border: 1px solid var(--light);
     border-radius: 10px;
 }
+
+/* interactive slide-in sidebar styling */
 
 .sidenav {
     height: 100%;
