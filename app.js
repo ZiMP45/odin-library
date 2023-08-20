@@ -25,7 +25,9 @@ function closeNav() {
     })
 }
 
-// read/not read toggle changes text
+// toggle changes text: read/not read
+
+card.forEach(card => changeStatus(card));
 
 function changeStatus() {
     let checkBox = document.getElementById("myCheck");
