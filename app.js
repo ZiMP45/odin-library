@@ -24,3 +24,18 @@ function closeNav() {
         card.style.border = '1px solid var(--light)';
     })
 }
+
+// read/not read toggle changes text
+
+function changeStatus() {
+    let checkBox = document.getElementById("myCheck");
+    let text = document.getElementById("text");
+
+    if (checkBox.checked == true) {
+        text.innerHTML = "read"
+        text.style.color = "black";
+    } else {
+        text.innerHTML = "not read"
+        text.style.color = "red";
+    }
+}
