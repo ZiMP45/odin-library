@@ -26,10 +26,11 @@ function closeNav() {
 }
 
 // toggle changes text: read/not read
-    
-function changeStatus() {
-    let toggle = document.getElementById('myCheck');
-    let parent = toggle.closest('.switch');
+
+let input = document.querySelectorAll('input[type=checkbox]');
+
+function changeStatus(input) {
+    let parent = input.closest('.switch');
     let text = parent.previousElementSibling;
 
     if (toggle.checked == true) {
