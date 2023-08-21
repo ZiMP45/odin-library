@@ -26,18 +26,15 @@ function closeNav() {
 }
 
 // toggle changes text: read/not read
-
-card.forEach(card => changeStatus(card));
-
+    
 function changeStatus() {
-    let checkBox = document.getElementById("myCheck");
-    let text = document.getElementById("text");
+    let toggle = document.getElementById('myCheck');
+    let parent = toggle.closest('.switch');
+    let text = parent.previousElementSibling;
 
-    if (checkBox.checked == true) {
-        text.innerHTML = "read"
-        text.style.color = "black";
+    if (toggle.checked == true) {
+        text.innerHTML = 'read';
     } else {
-        text.innerHTML = "not read"
-        text.style.color = "red";
+        text.innerHTML = 'not read';
     }
 }
