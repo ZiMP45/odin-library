@@ -1,6 +1,4 @@
 // sidebar open and close color change
-
-const card = document.querySelectorAll(".card");
 const container = document.getElementById("container");
 
 function openNav() {
@@ -23,19 +21,4 @@ function closeNav() {
     card.forEach(card => {
         card.style.border = '1px solid var(--light)';
     })
-}
-
-// toggle changes text: read/not read
-
-let input = document.querySelectorAll('input[type=checkbox]');
-
-function changeStatus(input) {
-    let parent = input.closest('.switch');
-    let text = parent.previousElementSibling;
-
-    if (toggle.checked == true) {
-        text.innerHTML = 'read';
-    } else {
-        text.innerHTML = 'not read';
-    }
 }
