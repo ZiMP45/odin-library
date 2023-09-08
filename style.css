@@ -241,11 +241,9 @@ input:checked + .slider:before {
   }
 
   /* add button section */
-.add {
-    grid-area: new;
-}
 
 .new {
+    grid-area: new;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
@@ -253,7 +251,7 @@ input:checked + .slider:before {
 }
 
 button {
-    width: 52px;
+    width: 36px;
     height: 36px;
     color: white;
     font-weight: bold;

@@ -22,3 +22,12 @@ function closeNav() {
         card.style.border = '1px solid var(--light)';
     })
 }
+
+// add button functionality
+function addNew() {
+    const cardsContainer = document.getElementsByClassName("cards");
+
+    const card = document.createElement("div");
+    card.innerHTML = ''
+
+}
