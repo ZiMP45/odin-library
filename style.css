@@ -27,9 +27,12 @@ body {
     grid-template-areas:
     "header header header"
     "main-content main-content main-content"
-    "main-content main-content main-content";
+    "main-content main-content main-content"
+    "new new new";
     transition: 0.5s;
 }
+
+/* header section */
 
 .header {
     display: grid;
@@ -79,6 +82,8 @@ body {
     text-decoration: none;
     color: white;
 }
+
+/* main-content section */
 
 .main-content {
     display: flex;
@@ -234,3 +239,25 @@ input:checked + .slider:before {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+
+  /* add button section */
+.add {
+    grid-area: new;
+}
+
+.new {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: 140px;
+}
+
+button {
+    width: 52px;
+    height: 36px;
+    color: white;
+    font-weight: bold;
+    background-color: #7BA830;
+    border: 1px solid #537120;
+    border-radius: 24px;
+}
