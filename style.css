@@ -187,7 +187,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
-    border: 1px solid black;
+    border: none;
     border-radius: 10px;
     z-index: 10;
     background-color: white;
@@ -204,7 +204,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid black;
+    background-color: var(--darker);
+    color: var(--lightest);
+    border-radius: 10px 10px 0 0;
+}
+
+.close-button {
+    color: var(--lightest);
 }
 
 .modal-header .title {
@@ -222,6 +228,9 @@ body {
 }
 
 .modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 10px 15px;
 }
 
@@ -249,4 +258,28 @@ body {
     background-color: var(--darkest);
     color: var(--lighter);
     border: none;
+}
+
+/* form styling */
+
+form {
+    width: 440px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+}
+
+input, select, label {
+    width: 416px;
+    margin: 12px;
+}
+
+input[type=submit] {
+    width: 150px;
+    align-items: center;
+}
+
+input:focus {
+    background: rgba(0,0,0,0.1);
 }
