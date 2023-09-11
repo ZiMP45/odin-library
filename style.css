@@ -2,7 +2,6 @@
     border: 1px solid black;
 } */
 
-
 :root {
     --lightest: #FAF6EE;
     --transition: #F5ECD9;
@@ -87,9 +86,11 @@ body {
 
 .main-content {
     display: flex;
+    flex-direction: column;
     grid-template-areas: main-content;
     height: fit-content;
     justify-content: center;
+    align-items: center;
     margin: 0;
 }
 
@@ -136,68 +137,6 @@ body {
     font-size: 14px;
     color: red;
 }
-
-/* toggle switch for read or not */
- .switch {
-    position: relative;
-    display: inline-block;
-    width: 46px;
-    height: 20px;
-    /* margin-top: 8px; */
-  }
-  
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-  
-/* The slider */
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--medium);
-    -webkit-transition: .4s;
-    transition: .4s;
-}
-  
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 12px;
-    width: 12px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-}
-  
-input:checked + .slider {
-    background-color: var(--darkest);
-}
-  
-input:focus + .slider {
-    box-shadow: 0 0 1px var(--darkest);
-}
-  
-input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-}
-
-.slider.round {
-    border-radius: 34px;
-}
-  
-.slider.round:before {
-    border-radius: 50%;
-} 
 
 /* interactive slide-in sidebar styling */
 
@@ -253,7 +192,7 @@ input:checked + .slider:before {
     z-index: 10;
     background-color: white;
     width: 500px;
-    max-width: 80%; 
+    max-width: 80%;
 }
 
 .modal.active {
@@ -301,4 +240,13 @@ input:checked + .slider:before {
 #overlay.active {
     opacity: 1;
     pointer-events: all;
+}
+
+.add {
+    margin-top: 12px;
+    padding: 8px;
+    width: fit-content;
+    background-color: var(--darkest);
+    color: var(--lighter);
+    border: none;
 }
