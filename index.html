@@ -63,30 +63,17 @@
         </div>
     
         <div class="main-content">
-            <div class="cards">
-                <!-- output div card as new book is added-->
-                <div class="card">
-                    <div class="title">Title</div>
-                    <div class="author">Author</div>
-                    <div class="ISBN">ISBN</div>
-                    <div class="pages">Pages</div>
+            <button data-modal-target="#modal">Open modal</button>
+            <div class="modal" id="modal">
+                <div class="modal-header" id="modal-header">
+                    <div class="title">Example Title</div>
+                    <button data-close-button class="close-button">&times;</button>
                 </div>
-                <div class="card">
-                    <div class="title">Title</div>
-                    <div class="author">Author</div>
-                    <div class="ISBN">ISBN</div>
-                    <div class="pages">Pages</div>
-                </div>
-                <div class="card">
-                    <div class="title">Title</div>
-                    <div class="author">Author</div>
-                    <div class="ISBN">ISBN</div>
-                    <div class="pages">Pages</div>
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos culpa eius enim quas ipsa ipsum eum expedita blanditiis consequatur commodi porro obcaecati reprehenderit, libero soluta placeat ab, veniam inventore consectetur debitis delectus aliquam! Eos ipsa dignissimos voluptate odio, repudiandae quia voluptatum, voluptatem sed nisi amet id cumque earum ducimus aut, obcaecati rerum magnam qui praesentium et ad recusandae ea tempora impedit? Incidunt, amet neque vero facilis minima architecto fugiat, nesciunt ullam perferendis eligendi officiis excepturi maxime? Placeat tempore maiores molestiae.
                 </div>
             </div>
-        </div>    
-        <div class="new">
-            <button class="add" onclick="addNew()">+</button>
+            <div id="overlay"></div>
         </div>
     </div>
 
