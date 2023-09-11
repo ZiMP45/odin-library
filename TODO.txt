@@ -1,4 +1,1 @@
-- On button press, pop up card with fields to input
 - field input should add information to new unique class
-- button on bottom of pop up will output information into a card
-    - title, author, pages, ISBN, read or not read

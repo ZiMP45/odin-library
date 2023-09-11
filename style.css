@@ -255,9 +255,11 @@ body {
     margin-top: 12px;
     padding: 8px;
     width: fit-content;
-    background-color: var(--darkest);
+    background-color: var(--darker);
     color: var(--lighter);
     border: none;
+    border-radius: 10px;
+    width: 120px;
 }
 
 /* form styling */
