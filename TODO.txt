@@ -1,1 +1,5 @@
 - field input should add information to new unique class
+
+- onsubmit, add card function in javascript should do:
+    - create object to pass information from form into a new object
+    - call create a card function with that information and add it to the main-content > cards div
