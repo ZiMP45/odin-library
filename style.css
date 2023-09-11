@@ -265,10 +265,10 @@ body {
 /* form styling */
 
 form {
-    width: 440px;
+    width: 450px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding: 12px;
 }
 
@@ -284,4 +284,10 @@ input[type=submit] {
 
 input:focus {
     background: rgba(0,0,0,0.1);
+}
+
+.submit {
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
