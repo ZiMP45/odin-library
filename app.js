@@ -60,3 +60,10 @@ function closeNav() {
         card.style.border = '1px solid var(--light)';
     })
 }
+
+function doSomething() {
+    let a = document.getElementById('title').value;
+    let b = document.getElementById('author').value;
+
+    alert(a + ' by ' + b);
+}
