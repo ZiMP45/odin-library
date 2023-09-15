@@ -81,19 +81,33 @@ function createObject() {
 
     const abc = new Book(a, b, c, d);
     bookList.push(abc);
-    printBooks();
+    printBooks(a, b, c, d);
 }
 
-function printBooks() {
-    // e.preventDefault();
-
+function printBooks(a, b, c, d) {
     const card = document.createElement("div");
+    const title = document.createElement("div");
+    const author = document.createElement("div");
+    const pages = document.createElement("div");
+    const isbn = document.createElement("div");
+
     card.classList.add("card");
+
+    title.textContent = a;
+    author.textContent = b;
+    pages.textContent = c;
+    isbn.textContent = d;
+
+    card.appendChild(title);
+    card.appendChild(author);
+    card.appendChild(pages);
+    card.appendChild(isbn);
+
     document.getElementById('cards').appendChild(card);
 }
 
 document.getElementById("myForm").addEventListener('submit', function(event) {
-    printBooks();
+    createObject();
 
     const modal = document.getElementById('modal');
     closeModal(modal);
