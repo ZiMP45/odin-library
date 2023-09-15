@@ -84,6 +84,8 @@ function createObject() {
     printBooks(a, b, c, d);
 }
 
+// create card in HTML from book information input
+
 function printBooks(a, b, c, d) {
     const card = document.createElement("div");
     const title = document.createElement("div");
@@ -105,6 +107,8 @@ function printBooks(a, b, c, d) {
 
     document.getElementById('cards').appendChild(card);
 }
+
+// close modal after submit and prevent page refresh which deletes cards
 
 document.getElementById("myForm").addEventListener('submit', function(event) {
     createObject();
