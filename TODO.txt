@@ -1,5 +1,6 @@
-- field input should add information to new unique class
-
-- onsubmit, add card function in javascript should do:
-    - create object to pass information from form into a new object
-    - call create a card function with that information and add it to the main-content > cards div
+- format cards with new information (reference CSS file)
+    - add classes to title/author divs to style them
+- add section for read or not read 
+- create function to clear input fields after submit
+- link sidebar to a database with corresponding titles
+- change background to gradient pattern (https://css-pattern.com/)
