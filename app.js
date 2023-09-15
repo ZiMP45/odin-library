@@ -62,6 +62,8 @@ function closeNav() {
     })
 }
 
+// stuff to create new book objects and output them as cards on HTML file
+
 function Book(title, author, pages, isbn, status) {
     this.title = title;
     this.author = author;
@@ -83,10 +85,18 @@ function createObject() {
 }
 
 function printBooks() {
-    const node = document.createElement("div");
-    node.classList.add("card");
+    // e.preventDefault();
 
-
-
-    document.getElementById('cards').appendChild(node);
+    const card = document.createElement("div");
+    card.classList.add("card");
+    document.getElementById('cards').appendChild(card);
 }
+
+document.getElementById("myForm").addEventListener('submit', function(event) {
+    printBooks();
+
+    const modal = document.getElementById('modal');
+    closeModal(modal);
+
+    event.preventDefault();
+});
