@@ -2,6 +2,7 @@
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
 const overlay = document.getElementById('overlay')
+let bookList = [];
 
 openModalButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -77,6 +78,15 @@ function createObject() {
     let d = document.getElementById('isbn').value;
 
     const abc = new Book(a, b, c, d);
-    alert(abc.pages);
+    bookList.push(abc);
+    printBooks();
 }
 
+function printBooks() {
+    const node = document.createElement("div");
+    node.classList.add("card");
+
+
+
+    document.getElementById('cards').appendChild(node);
+}
