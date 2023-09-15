@@ -61,10 +61,22 @@ function closeNav() {
     })
 }
 
-function doSomething() {
+function Book(title, author, pages, isbn, status) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.isbn = isbn;
+    // this.status = status;
+}
+
+// Takes information from form and converts to an object
+function createObject() {
     let a = document.getElementById('title').value;
     let b = document.getElementById('author').value;
+    let c = document.getElementById('pages').value;
+    let d = document.getElementById('isbn').value;
 
-    alert(a + ' by ' + b);
+    const abc = new Book(a, b, c, d);
+    alert(abc.pages);
 }
 
