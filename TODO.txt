@@ -1,7 +1,4 @@
-- format cards with new information (reference CSS file)
-    - add classes to title/author divs to style them
 - add section for read or not read 
-- create function to clear input fields after submit
 - link sidebar to a database with corresponding titles
 - change background to gradient pattern (https://css-pattern.com/)
 - add button on each card for deletion of book
