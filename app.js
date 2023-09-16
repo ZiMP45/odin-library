@@ -65,24 +65,23 @@ function closeNav() {
 
 // stuff to create new book objects and output them as cards on HTML file
 
-function Book(title, author, pages, isbn, status) {
+function Book(title, author, pages, isbn) {
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.isbn = isbn;
-    // this.status = status;
 }
 
 // Takes information from form and converts to an object
 function createObject() {
-    let a = document.getElementById('title').value;
-    let b = document.getElementById('author').value;
-    let c = document.getElementById('pages').value;
-    let d = document.getElementById('isbn').value;
+    let title = document.getElementById('title').value;
+    let author = document.getElementById('author').value;
+    let pages = document.getElementById('pages').value;
+    let isbn = document.getElementById('isbn').value;
 
-    const abc = new Book(a, b, c, d);
+    const abc = new Book(title, author, pages, isbn);
     bookList.push(abc);
-    printBooks(a, b, c, d);
+    printBooks(title, author, pages, isbn);
 }
 
 // create card in HTML from book information input
