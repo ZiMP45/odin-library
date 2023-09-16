@@ -94,6 +94,10 @@ function printBooks(a, b, c, d) {
     const isbn = document.createElement("div");
 
     card.classList.add("card");
+    title.classList.add("title");
+    author.classList.add("author");
+    pages.classList.add("pages");
+    isbn.classList.add("isbn");
 
     title.textContent = a;
     author.textContent = b;
