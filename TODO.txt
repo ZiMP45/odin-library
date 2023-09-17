@@ -1,3 +1,5 @@
 - add section for read or not read 
 - link sidebar to a database with corresponding titles
 - add button on each card for deletion of book
+    - add index number onto card that corresponds with it's place in the bookList array
+    - on deletion button click, remove that specific index from the array?

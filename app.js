@@ -92,22 +92,34 @@ function printBooks(a, b, c, d) {
     const author = document.createElement("div");
     const pages = document.createElement("div");
     const isbn = document.createElement("div");
+    const buttonSection = document.createElement("div");
+    const status = document.createElement("button");
+    const remove = document.createElement("button");
 
     card.classList.add("card");
     title.classList.add("title");
     author.classList.add("author");
     pages.classList.add("pages");
     isbn.classList.add("isbn");
+    buttonSection.classList.add("section");
+    status.classList.add("status");
+    remove.classList.add("remove-btn");
 
     title.textContent = a;
     author.textContent = b;
-    pages.textContent = c;
+    pages.textContent = c + " pages";
     isbn.textContent = d;
+    remove.textContent = "remove";
+    status.textContent = "read";
+
+    buttonSection.appendChild(status);
+    buttonSection.appendChild(remove);
 
     card.appendChild(title);
     card.appendChild(author);
     card.appendChild(pages);
     card.appendChild(isbn);
+    card.appendChild(buttonSection);
 
     document.getElementById('cards').appendChild(card);
 }
