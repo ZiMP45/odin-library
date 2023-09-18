@@ -141,12 +141,30 @@ body {
     font-size: 16px;
 }
 
-.status, .remove-btn {
-    width: fit-content;
-    height: fit-content;
+.remove-btn {
+    width: 80px;
+    height: 24px;
     background-color: var(--darkest);
     color: var(--light);
     border-radius: 10px;
+    border: none;
+}
+
+.status {
+    width: 48px;
+    height: 24px;
+    background-color: green;
+    color: var(--light);
+    border-radius: 10px;
+    border: none;
+}
+
+.status:hover {
+    border: 2px solid black;
+}
+
+.remove-btn:hover {
+    border: 2px solid var(--medium);
 }
 
 .section {
