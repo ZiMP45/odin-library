@@ -142,7 +142,7 @@ body {
 }
 
 .remove-btn {
-    width: 80px;
+    width: 68px;
     height: 24px;
     background-color: var(--darkest);
     color: var(--light);
@@ -151,9 +151,9 @@ body {
 }
 
 .status {
-    width: 48px;
+    width: 68px;
     height: 24px;
-    background-color: green;
+    background-color: red;
     color: var(--light);
     border-radius: 10px;
     border: none;

@@ -103,6 +103,9 @@ function printBooks(a, b, c, d) {
     isbn.classList.add("isbn");
     buttonSection.classList.add("section");
     status.classList.add("status");
+    status.setAttribute('id', '1');
+    status.setAttribute('value', 'OFF');
+    status.setAttribute('onclick', 'toggle(this)');
     remove.classList.add("remove-btn");
 
     title.textContent = a;
@@ -110,7 +113,7 @@ function printBooks(a, b, c, d) {
     pages.textContent = c + " pages";
     isbn.textContent = d;
     remove.textContent = "remove";
-    status.textContent = "read";
+    status.textContent = "not read";
 
     buttonSection.appendChild(status);
     buttonSection.appendChild(remove);
@@ -135,3 +138,16 @@ document.getElementById("myForm").addEventListener('submit', function(event) {
     event.preventDefault();
     form.reset();
 });
+
+function toggle(button) {
+    if(button.value == "OFF") {
+        button.value="ON";
+        button.style.backgroundColor = "green";
+        button.textContent = "read";
+    } else {
+        button.value="OFF";
+        button.style.backgroundColor = "red";
+        button.textContent = "not read";
+    }
+    
+}
