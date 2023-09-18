@@ -1,5 +1,4 @@
 - link sidebar to a database with corresponding titles
-    - extract all book titles from array of objects and put into a title array, repeat for Authors
     - separate page with list for each book/author/whatever
 - add button on each card for deletion of book (button added, need hookup)
     - add index number onto card that corresponds with it's place in the bookList array
