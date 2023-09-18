@@ -18,7 +18,7 @@ body {
     padding: 0;
     font-family: 'Ubuntu', sans-serif;
 
-    --s: 30px; /* control the size*/    
+    --s: 18px; /* control the size*/    
     --_g: 0 120deg,#0000 0;
 
     background:
@@ -32,9 +32,10 @@ body {
     background-size: calc(var(--s)*1.732) var(--s);
 }
 
-.title {
+.nav-title {
     text-decoration: none;
-    color: var(--lightest)
+    color: var(--lightest);
+    font-size: 24px;
 }
 
 #container {

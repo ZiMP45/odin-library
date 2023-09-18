@@ -72,6 +72,18 @@ function Book(title, author, pages, isbn) {
     this.isbn = isbn;
 }
 
+// close modal after submit and prevent page refresh which deletes cards
+
+document.getElementById("myForm").addEventListener('submit', function(event) {
+    createObject();
+
+    const modal = document.getElementById('modal');
+    closeModal(modal);
+
+    event.preventDefault();
+    form.reset();
+});
+
 // Takes information from form and converts to an object
 function createObject() {
     let title = document.getElementById('title').value;
@@ -82,7 +94,10 @@ function createObject() {
     const abc = new Book(title, author, pages, isbn);
     bookList.push(abc);
     printBooks(title, author, pages, isbn);
+
+    // create arrays for titles and authors for use on other pages
     let bookTitles = bookList.map(a => a.title);
+    let bookAuthors = bookList.map(b => b.author);
 }
 
 // create card in HTML from book information input
@@ -108,6 +123,7 @@ function printBooks(a, b, c, d) {
     status.setAttribute('value', 'OFF');
     status.setAttribute('onclick', 'toggle(this)');
     remove.classList.add("remove-btn");
+    remove.setAttribute('onclick', 'return this.parentNode.parentNode.remove()');
 
     title.textContent = a;
     author.textContent = b;
@@ -128,18 +144,6 @@ function printBooks(a, b, c, d) {
     document.getElementById('cards').appendChild(card);
 }
 
-// close modal after submit and prevent page refresh which deletes cards
-
-document.getElementById("myForm").addEventListener('submit', function(event) {
-    createObject();
-
-    const modal = document.getElementById('modal');
-    closeModal(modal);
-
-    event.preventDefault();
-    form.reset();
-});
-
 // toggle read/not read status on card
 
 function toggle(button) {
@@ -153,15 +157,4 @@ function toggle(button) {
         button.textContent = "not read";
     }
     
-}
-
-function printBookTitles(bookTitles) {
-    const listItem = document.createElement('li');
-
-    listItem.classList.add('title');
-    listItem.setAttribute('id', 'title');
-
-    listItem.textContent = bookTitles[0];
-
-    document.getElementsByClassName('book-list').appendChild(listItem);
 }
