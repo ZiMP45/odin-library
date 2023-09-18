@@ -94,10 +94,11 @@ function createObject() {
     const abc = new Book(title, author, pages, isbn);
     bookList.push(abc);
     printBooks(title, author, pages, isbn);
+    console.log(bookList);
 
     // create arrays for titles and authors for use on other pages
-    let bookTitles = bookList.map(a => a.title);
-    let bookAuthors = bookList.map(b => b.author);
+    // let bookTitles = bookList.map(a => a.title);
+    // let bookAuthors = bookList.map(b => b.author);
 }
 
 // create card in HTML from book information input
@@ -123,7 +124,7 @@ function printBooks(a, b, c, d) {
     status.setAttribute('value', 'OFF');
     status.setAttribute('onclick', 'toggle(this)');
     remove.classList.add("remove-btn");
-    remove.setAttribute('onclick', 'return this.parentNode.parentNode.remove()');
+    remove.setAttribute('onclick', 'removeCard(this)');
 
     title.textContent = a;
     author.textContent = b;
@@ -157,4 +158,17 @@ function toggle(button) {
         button.textContent = "not read";
     }
     
+}
+
+// need to tweak this, turn objects into arrays and then flatten arrays,
+// then select that specific book and splice the surrounding elements associated with it.
+
+function removeCard (a) {
+    let z = a.parentNode.parentNode;
+    z.remove();
+    let b = bookList.indexOf(z);
+    bookList.splice(b, 1);
+
+    const entries = Object.entries(bookList);
+    console.log(entries);
 }
