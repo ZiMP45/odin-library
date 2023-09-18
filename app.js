@@ -82,6 +82,7 @@ function createObject() {
     const abc = new Book(title, author, pages, isbn);
     bookList.push(abc);
     printBooks(title, author, pages, isbn);
+    let bookTitles = bookList.map(a => a.title);
 }
 
 // create card in HTML from book information input
@@ -139,6 +140,8 @@ document.getElementById("myForm").addEventListener('submit', function(event) {
     form.reset();
 });
 
+// toggle read/not read status on card
+
 function toggle(button) {
     if(button.value == "OFF") {
         button.value="ON";
@@ -150,4 +153,15 @@ function toggle(button) {
         button.textContent = "not read";
     }
     
+}
+
+function printBookTitles(bookTitles) {
+    const listItem = document.createElement('li');
+
+    listItem.classList.add('title');
+    listItem.setAttribute('id', 'title');
+
+    listItem.textContent = bookTitles[0];
+
+    document.getElementsByClassName('book-list').appendChild(listItem);
 }

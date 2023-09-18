@@ -32,6 +32,11 @@ body {
     background-size: calc(var(--s)*1.732) var(--s);
 }
 
+.title {
+    text-decoration: none;
+    color: var(--lightest)
+}
+
 #container {
     display: flex;
     flex-direction: column;
@@ -325,6 +330,13 @@ input:focus {
     display: flex;
     align-content: center;
     justify-content: center;
+}
+
+/* book list styling on separate page */
+
+.book-list {
+    height: 500px;
+    width: 500px;
 }
 
   

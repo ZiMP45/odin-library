@@ -1,6 +1,7 @@
 - link sidebar to a database with corresponding titles
+    - extract all book titles from array of objects and put into a title array, repeat for Authors
+    - separate page with list for each book/author/whatever
 - add button on each card for deletion of book (button added, need hookup)
     - add index number onto card that corresponds with it's place in the bookList array
     - on deletion button click, remove that specific index from the array?
 - Simplify card creation, use template variable up top instead of long lines of code
-- Hook up read button to change color and read/notread based on toggle click thing, idk
