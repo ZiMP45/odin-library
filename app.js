@@ -1,9 +1,10 @@
-// add modal button functionality
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
 const overlay = document.getElementById('overlay')
 const form = document.getElementById('myForm');
-let bookList = [];
+const container = document.getElementById("container");
+
+// Modal open and close functionality
 
 openModalButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -39,8 +40,6 @@ function closeModal(modal) {
 }
 
 // sidebar open and close color change
-const container = document.getElementById("container");
-
 function openNav() {
     document.getElementById("mySidenav").style.width = "300px";
     container.style.marginLeft = "300px";
@@ -63,7 +62,7 @@ function closeNav() {
     })
 }
 
-// stuff to create new book objects and output them as cards on HTML file
+// book object prototype
 
 function Book(title, author, pages, isbn) {
     this.title = title;
@@ -92,9 +91,10 @@ function createObject() {
     let isbn = document.getElementById('isbn').value;
 
     const abc = new Book(title, author, pages, isbn);
-    bookList.push(abc);
+
+    // create card div and assign all attributes for CSS
+
     printBooks(title, author, pages, isbn);
-    console.log(bookList);
 
     // create arrays for titles and authors for use on other pages
     // let bookTitles = bookList.map(a => a.title);
@@ -124,7 +124,7 @@ function printBooks(a, b, c, d) {
     status.setAttribute('value', 'OFF');
     status.setAttribute('onclick', 'toggle(this)');
     remove.classList.add("remove-btn");
-    remove.setAttribute('onclick', 'removeCard(this)');
+    remove.setAttribute('onclick', 'removeCard(this);');
 
     title.textContent = a;
     author.textContent = b;
@@ -164,11 +164,5 @@ function toggle(button) {
 // then select that specific book and splice the surrounding elements associated with it.
 
 function removeCard (a) {
-    let z = a.parentNode.parentNode;
-    z.remove();
-    let b = bookList.indexOf(z);
-    bookList.splice(b, 1);
-
-    const entries = Object.entries(bookList);
-    console.log(entries);
+    a.parentNode.parentNode.remove();
 }
