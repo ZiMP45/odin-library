@@ -3,6 +3,8 @@ const closeModalButtons = document.querySelectorAll('[data-close-button]')
 const overlay = document.getElementById('overlay')
 const form = document.getElementById('myForm');
 const container = document.getElementById("container");
+// for sel
+let i = 1;
 
 // Modal open and close functionality
 
