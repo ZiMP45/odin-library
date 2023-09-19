@@ -102,7 +102,6 @@ function createObject() {
 }
 
 // create card in HTML from book information input
-
 function printBooks(a, b, c, d) {
     const card = document.createElement("div");
     const title = document.createElement("div");
@@ -146,7 +145,6 @@ function printBooks(a, b, c, d) {
 }
 
 // toggle read/not read status on card
-
 function toggle(button) {
     if(button.value == "OFF") {
         button.value="ON";
@@ -160,9 +158,7 @@ function toggle(button) {
     
 }
 
-// need to tweak this, turn objects into arrays and then flatten arrays,
-// then select that specific book and splice the surrounding elements associated with it.
-
+// remove card from main-content area on button click
 function removeCard (a) {
     a.parentNode.parentNode.remove();
 }
