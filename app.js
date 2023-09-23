@@ -108,14 +108,10 @@ function createObject() {
 
 // create card in HTML from book information input
 function printBooks(a, b, c, d, e) {
-    const card = document.createElement("div");
-    const title = document.createElement("div");
-    const author = document.createElement("div");
-    const pages = document.createElement("div");
-    const isbn = document.createElement("div");
-    const buttonSection = document.createElement("div");
-    const status = document.createElement("button");
-    const remove = document.createElement("button");
+    const card = document.createElement("div"), title = document.createElement("div"), 
+          author = document.createElement("div"), pages = document.createElement("div"), 
+          isbn = document.createElement("div"), buttonSection = document.createElement("div"), 
+          status = document.createElement("button"), remove = document.createElement("button");
 
     card.classList.add("card");
     card.setAttribute('id', e);
@@ -138,14 +134,9 @@ function printBooks(a, b, c, d, e) {
     remove.textContent = "remove";
     status.textContent = "not read";
 
-    buttonSection.appendChild(status);
-    buttonSection.appendChild(remove);
+    buttonSection.append(status, remove);
 
-    card.appendChild(title);
-    card.appendChild(author);
-    card.appendChild(pages);
-    card.appendChild(isbn);
-    card.appendChild(buttonSection);
+    card.append(title, author, pages, isbn, buttonSection);
 
     document.getElementById('cards').appendChild(card);
 }
