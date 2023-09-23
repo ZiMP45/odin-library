@@ -6,7 +6,7 @@ const container = document.getElementById("container");
 const library = [];
 
 // for selecting book to input into library and for removal
-let index = 1;
+let index = 0;
 
 // Modal open and close functionality
 
@@ -104,10 +104,6 @@ function createObject() {
 
     printBooks(title, author, pages, isbn, index);
     index++;
-
-    // create arrays for titles and authors for use on other pages
-    // let bookTitles = bookList.map(a => a.title);
-    // let bookAuthors = bookList.map(b => b.author);
 }
 
 // create card in HTML from book information input
@@ -133,7 +129,7 @@ function printBooks(a, b, c, d, e) {
     status.setAttribute('value', 'OFF');
     status.setAttribute('onclick', 'toggle(this)');
     remove.classList.add("remove-btn");
-    remove.setAttribute('onclick', 'removeCard(this);');
+    remove.setAttribute('onclick', 'removeStuff(this);');
 
     title.textContent = a;
     author.textContent = b;
@@ -166,6 +162,24 @@ function toggle(button) {
         button.textContent = "not read";
     }
     
+}
+
+// helper function to remove stuff
+function removeStuff(a) {
+    removeFromLibrary(a);
+    removeCard(a);
+}
+
+// remove book from library
+function removeFromLibrary(a) {
+    let num = a.parentNode.parentNode.id;
+
+    library.forEach((element) => {
+        if (element.index == num) {
+            library.splice(element, 1);
+            console.log(library);
+        }
+    })
 }
 
 // remove card from main-content area on button click
