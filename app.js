@@ -173,12 +173,14 @@ function removeStuff(a) {
 // remove book from library
 function removeFromLibrary(a) {
     let num = a.parentNode.parentNode.id;
+    let counter = 0;
 
     library.forEach((element) => {
         if (element.index == num) {
-            library.splice(element, 1);
+            library.splice(counter, 1);
             console.log(library);
         }
+        counter++;
     })
 }
 
