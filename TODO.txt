@@ -1,8 +1,2 @@
 - link sidebar to a database with corresponding titles
     - separate page with list for each book/author/whatever
-- add button on each card for deletion of book (button added, need hookup)
-    - add index number onto card that corresponds with it's place in the bookList array
-    - on deletion button click, remove that specific index from the array?
-    - Use data attributes (data-*) to assign title to each. When looking to delete it from the library you  can search for that data attribute and remove it?
-    - https://javascript.plainenglish.io/quick-guide-to-using-data-attributes-f1f2c3161d5f
-- Simplify card creation, use template variable up top instead of long lines of code
