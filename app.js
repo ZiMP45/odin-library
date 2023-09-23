@@ -3,8 +3,10 @@ const closeModalButtons = document.querySelectorAll('[data-close-button]')
 const overlay = document.getElementById('overlay')
 const form = document.getElementById('myForm');
 const container = document.getElementById("container");
-// for sel
-let i = 1;
+const library = [];
+
+// for selecting book to input into library and for removal
+let index = 1;
 
 // Modal open and close functionality
 
@@ -66,11 +68,12 @@ function closeNav() {
 
 // book object prototype
 
-function Book(title, author, pages, isbn) {
+function Book(title, author, pages, isbn, index) {
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.isbn = isbn;
+    this.index = index;
 }
 
 // close modal after submit and prevent page refresh which deletes cards
@@ -92,11 +95,15 @@ function createObject() {
     let pages = document.getElementById('pages').value;
     let isbn = document.getElementById('isbn').value;
 
-    const abc = new Book(title, author, pages, isbn);
+    const abc = new Book(title, author, pages, isbn, index);
+
+    // push to library
+    library.push(abc);
 
     // create card div and assign all attributes for CSS
 
-    printBooks(title, author, pages, isbn);
+    printBooks(title, author, pages, isbn, index);
+    index++;
 
     // create arrays for titles and authors for use on other pages
     // let bookTitles = bookList.map(a => a.title);
@@ -104,7 +111,7 @@ function createObject() {
 }
 
 // create card in HTML from book information input
-function printBooks(a, b, c, d) {
+function printBooks(a, b, c, d, e) {
     const card = document.createElement("div");
     const title = document.createElement("div");
     const author = document.createElement("div");
@@ -115,6 +122,7 @@ function printBooks(a, b, c, d) {
     const remove = document.createElement("button");
 
     card.classList.add("card");
+    card.setAttribute('id', e);
     title.classList.add("title");
     author.classList.add("author");
     pages.classList.add("pages");
