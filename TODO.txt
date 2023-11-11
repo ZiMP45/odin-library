@@ -1,2 +1,6 @@
-- link sidebar to a database with corresponding titles
-    - separate page with list for each book/author/whatever
+- reformat Book into class
+- turn library into a class?
+- initial modal stuff is fine
+- make createBookCard into a function instead of the trash I wrote before
+- fix how book is stored in library.
+- I don't know just basically rewrite the whole JS file because, even though it works, it's confusing and looks like ass
