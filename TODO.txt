@@ -1,4 +1,3 @@
-- reformat Book into class
 - turn library into a class?
 - initial modal stuff is fine
 - make createBookCard into a function instead of the trash I wrote before
