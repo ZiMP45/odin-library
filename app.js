@@ -110,10 +110,14 @@ function createObject() {
 
 // create card in HTML from book information input
 function printBooks(a, b, c, d, e) {
-    const card = document.createElement("div"), title = document.createElement("div"), 
-          author = document.createElement("div"), pages = document.createElement("div"), 
-          isbn = document.createElement("div"), buttonSection = document.createElement("div"), 
-          status = document.createElement("button"), remove = document.createElement("button");
+    const card = document.createElement("div")
+    const title = document.createElement("div") 
+    const author = document.createElement("div")
+    const pages = document.createElement("div") 
+    const isbn = document.createElement("div")
+    const buttonSection = document.createElement("div")
+    const status = document.createElement("button") 
+    const remove = document.createElement("button")
 
     card.classList.add("card");
     card.setAttribute('id', e);
