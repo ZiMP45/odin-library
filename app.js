@@ -3,7 +3,7 @@ const closeModalButtons = document.querySelectorAll('[data-close-button]')
 const overlay = document.getElementById('overlay')
 const form = document.getElementById('myForm');
 const container = document.getElementById("container");
-
+const library = [];
 
 // for selecting book to input into library and for removal
 let index = 0;
@@ -100,7 +100,7 @@ function createObject() {
     const abc = new Book(title, author, pages, isbn, index);
 
     // push to library
-    abc.addToLibrary(abc);
+    library.push(abc);
 
     // create card div and assign all attributes for CSS
 
