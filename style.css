@@ -21,7 +21,7 @@ body {
     --s: 18px; /* control the size*/    
     --_g: 0 120deg,#0000 0;
 
-    background:
+    /* background:
       conic-gradient(from    0deg at calc(500%/6) calc(100%/3),var(--medium) var(--_g)),
       conic-gradient(from -120deg at calc(100%/6) calc(100%/3),var(--light) var(--_g)),
       conic-gradient(from  120deg at calc(100%/3) calc(500%/6),var(--lighter) var(--_g)),
@@ -29,8 +29,10 @@ body {
       conic-gradient(from -180deg at calc(100%/3) 50%,var(--light)  60deg,var(--lighter) var(--_g)),
       conic-gradient(from   60deg at calc(200%/3) 50%,var(--lighter)  60deg,var(--medium) var(--_g)),
       conic-gradient(from  -60deg at 50% calc(100%/3),var(--lighter) 120deg,var(--light) 0 240deg,var(--medium) 0);
-    background-size: calc(var(--s)*1.732) var(--s);
-}
+    background-size: calc(var(--s)*1.732) var(--s); */
+
+    background-color: var(--light);
+} 
 
 .nav-title {
     text-decoration: none;
