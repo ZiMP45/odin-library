@@ -8,10 +8,3 @@ class Book {
         this.index = index;    
     }
 }
-
-// library class
-class Library {
-    constructor() {
-        this.books = [];
-    }
-}
