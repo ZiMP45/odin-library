@@ -3,7 +3,7 @@ const closeModalButtons = document.querySelectorAll('[data-close-button]')
 const overlay = document.getElementById('overlay')
 const form = document.getElementById('myForm');
 const container = document.getElementById("container");
-const library = [];
+
 
 // for selecting book to input into library and for removal
 let index = 0;
@@ -78,13 +78,6 @@ class Book {
     }
 }
 
-// library class
-class Library {
-    constructor() {
-        this.books = [];
-    }
-}
-
 // close modal after submit and prevent page refresh which deletes cards
 
 document.getElementById("myForm").addEventListener('submit', function(event) {
@@ -107,7 +100,7 @@ function createObject() {
     const abc = new Book(title, author, pages, isbn, index);
 
     // push to library
-    library.push(abc);
+    abc.addToLibrary(abc);
 
     // create card div and assign all attributes for CSS
 
