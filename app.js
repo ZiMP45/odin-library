@@ -66,7 +66,7 @@ function closeNav() {
     })
 }
 
-// book object prototype
+// book class
 
 class Book {
     constructor(title, author, pages, isbn, index) {
@@ -75,6 +75,13 @@ class Book {
         this.pages = pages;
         this.isbn = isbn;
         this.index = index;    
+    }
+}
+
+// library class
+class Library {
+    constructor() {
+        this.books = [];
     }
 }
 
