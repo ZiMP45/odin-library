@@ -91,13 +91,13 @@ document.getElementById("myForm").addEventListener('submit', function(event) {
 });
 
 // Takes information from form and converts to an object
-function createObject() {
+const createObject = () => {
     let title = document.getElementById('title').value;
     let author = document.getElementById('author').value;
     let pages = document.getElementById('pages').value;
     let isbn = document.getElementById('isbn').value;
 
-    const abc = new Book(title, author, pages, isbn, index);
+    const abc =  new Book(title, author, pages, isbn, index);
 
     // push to library
     library.push(abc);
@@ -175,7 +175,6 @@ function removeFromLibrary(a) {
     library.forEach((element) => {
         if (element.index == num) {
             library.splice(counter, 1);
-            console.log(library);
         }
         counter++;
     })

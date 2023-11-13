@@ -1,2 +1,4 @@
-- make createBookCard into a function instead of the trash I wrote before
-- I don't know just basically rewrite the whole JS file because, even though it works, it's confusing and looks like ass
+- rework to change library to class
+- for removing books, search is in library instead of removing based 
+  on index because the index will run forever
+- Other stuff seems to work fine.
